@@ -1,0 +1,22 @@
+[
+    {
+        "no": "1758286257",
+        "action": "add",
+        "old_photo": "",
+        "name": "Direct%20Hydraulic%20Goods%20Lift",
+        "category_id": "1758285591",
+        "amount": "2000",
+        "is_active": "1",
+        "avatar": "1758286314.jpeg"
+    },
+    {
+        "no": "1758286490",
+        "action": "edit",
+        "old_photo": "",
+        "name": "Direct%20Hydraulic%20Lift_3000%20Kg%20Capacity",
+        "category_id": "1758285591",
+        "amount": "25000",
+        "is_active": "1",
+        "avatar": ""
+    }
+]

@@ -1,0 +1,56 @@
+<?php
+	session_start(); 
+	include dirname(__DIR__).'/common.php';
+
+	if(isset($_GET['action']) && $_GET['action'] != "") {
+		$service = fetchRowData("service.json",$_GET["no"]);
+		removeData("service.json",$_GET['no']);
+		if($service["avatar"] != "" && file_exists("uploads/".$service["avatar"])) {
+			unlink("uploads/".$service["avatar"]);
+		}
+		$redirect_url = "http://localhost/pushpak/admin/service/list.php";
+	} else {
+		$post = $_POST;
+		$redirect_url = $post["redirect_url"];
+		if($post["action"] == "add") {
+			$avatar = "";
+			if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
+		        $targetDir = "uploads/";
+		        $originalName = $_FILES["photo"]["name"];
+		        $fileTmpPath = $_FILES["photo"]["tmp_name"];
+		        $fileType = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
+
+		        $avatar = time().'.'.$fileType;
+	            $targetFilePath = $targetDir . $avatar;
+	            if (move_uploaded_file($fileTmpPath, $targetFilePath)) {
+	                // echo "File uploaded successfully as: " . $avatar;
+	            }
+		    }
+		    $post["avatar"] = $avatar;
+			$post["name"] = rawurlencode($post["name"]);
+			unset($post["redirect_url"]);
+			insertData("service.json",$post);	
+			$_SESSION["error"] = "Service added successfully.";
+		} else {
+			$avatar = $post["old_photo"];
+			if (isset($_FILES['photo']) && $_FILES['photo']['error'] == 0) {
+		        $targetDir = "uploads/";
+		        $originalName = $_FILES["photo"]["name"];
+		        $fileTmpPath = $_FILES["photo"]["tmp_name"];
+		        $fileType = strtolower(pathinfo($originalName, PATHINFO_EXTENSION));
+
+		        $avatar = time().'.'.$fileType;
+	            $targetFilePath = $targetDir . $avatar;
+	            if (move_uploaded_file($fileTmpPath, $targetFilePath)) {
+	                // echo "File uploaded successfully as: " . $avatar;
+	            }
+		    }
+		    $post["avatar"] = $avatar;
+			$post["name"] = rawurlencode($post["name"]);
+			unset($post["redirect_url"]);
+			updateData("service.json",$post["no"],$post);	
+			$_SESSION["error"] = "Service edited successfully.";
+		}
+	}
+	header("location: ".$redirect_url);
+?>

@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+	include 'common.php';
+	$site = fetchData("settings.json");
+?>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -8,7 +12,7 @@
 		<meta name="keywords" content="">
 		<meta name="author" content="">
 		<meta name="robots" content="">
-		<title>Pushpak Hydro Tech</title>
+		<title><?php echo isset($site[0]['name']) ? $site[0]['name'] : ''; ?></title>
 		
 		<!-- Favicon -->
 	    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
@@ -38,7 +42,7 @@
                             <form id="loginForm" method="POST" action="check_auth.php">
                                 <div class="login-userset">
                                 	<div class="login-userheading">
-                                    	<h3>Pushpak Hydro Tech</h3>
+                                    	<h3><?php echo isset($site[0]['name']) ? $site[0]['name'] : ''; ?></h3>
                                     	<h4>Access the admin panel using your email and passcode.</h4>
                                 	</div>
                                 	<div class="mb-3">
