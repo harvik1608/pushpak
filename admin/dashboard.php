@@ -7,6 +7,7 @@
 	$categories = fetchData("category.json");
 	$members = fetchData("member.json");
 	$feedbacks = fetchData("feedback.json");
+	$inquiries = fetchData("inquiry.json");
 ?>
 <div class="welcome-wrap mb-4">
 	<div class=" d-flex align-items-center justify-content-between flex-wrap">
@@ -127,6 +128,22 @@
 					<div class="ms-2 overflow-hidden">
 						<p class="fs-12 fw-medium mb-1 text-truncate">Total Feedbacks</p>
 						<h4><?php echo count($feedbacks); ?></h4>
+					</div>
+				</div>
+				<div id="total-chart"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6 d-flex">
+		<div class="card flex-fill">
+			<div class="card-body d-flex align-items-center justify-content-between">
+				<div class="d-flex align-items-center overflow-hidden">
+					<span class="avatar avatar-lg bg-secondary flex-shrink-0">
+						<i class="ti ti-building fs-16"></i>
+					</span>
+					<div class="ms-2 overflow-hidden">
+						<p class="fs-12 fw-medium mb-1 text-truncate">Total Inquiries</p>
+						<h4><?php echo count($inquiries); ?></h4>
 					</div>
 				</div>
 				<div id="total-chart"></div>

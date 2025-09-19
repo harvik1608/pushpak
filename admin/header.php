@@ -1,8 +1,10 @@
-<!DOCTYPE html>
 <?php 
+	session_start();
+
 	include 'common.php';
 	$site = fetchData("settings.json");
 ?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -12,7 +14,7 @@
 		<meta name="keywords" content="">
 		<meta name="author" content="">
 		<meta name="robots" content="">
-		<title>Pushpak Hydro Tech</title>
+		<title><?php echo $site[0]["site_name"]; ?></title>
 		
 		<script>
 			var base_url = "<?php echo $site[0]["website_url"]; ?>";
@@ -29,8 +31,12 @@
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/plugins/fontawesome/css/fontawesome.min.css">
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/plugins/fontawesome/css/all.min.css">
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/plugins/tabler-icons/tabler-icons.min.css">
+		<link rel="stylesheet" type="text/css" href="https://supermetplast.com/public/assets/toast/jquery.toast.css">
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/css/style.css">
 		<style>
+			.jq-toast-single {
+				font-family: "Nunito" !important;
+			}
 			label.form-label {
 				font-weight: bold !important;
 			}
@@ -38,6 +44,12 @@
 		<script src="<?php echo $site[0]["website_url"]; ?>assets/js/jquery-3.7.1.min.js"></script>
 	</head>
 	<body>
+		<?php
+			if(isset($_SESSION['error'])) {
+				echo "<span id='flashMsg' hidden>".$_SESSION['error']."</span>";
+				unset($_SESSION['error']);
+			}
+		?>
 		<div class="main-wrapper">
 			<div class="header">
 				<div class="main-header">
@@ -167,6 +179,16 @@
 									<li>
 										<a href="<?php echo $site[0]["website_url"]; ?>admin/dashboard.php">
 											<i data-feather="box"></i><span>Dashboard</span>
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo $site[0]["website_url"]; ?>admin/settings.php">
+											<i data-feather="box"></i><span>General Settings</span>
+										</a>
+									</li>
+									<li>
+										<a href="<?php echo $site[0]["website_url"]; ?>admin/inquiry/list.php">
+											<i data-feather="box"></i><span>Inquiry List</span>
 										</a>
 									</li>
 								</ul>
