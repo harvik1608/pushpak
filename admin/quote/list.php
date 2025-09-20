@@ -1,9 +1,12 @@
-<?php include dirname(__DIR__).'/header.php'; ?>
+<?php 
+	include dirname(__DIR__).'/header.php'; 
+	$quotes = fetchData("quote.json");
+?>
 <div class="page-header">
 	<div class="add-item d-flex">
 		<div class="page-title">
 			<h4 class="fw-bold">Quote List</h4>
-			<h6>Total quotes found.</h6>
+			<h6>Total <?php echo count($quotes); ?> quotes found.</h6>
 		</div>
 	</div>
 	<!-- <div class="page-btn">
@@ -38,15 +41,32 @@
 			<table class="table datatable">
 				<thead class="thead-light">
 					<tr>
-						<th>#</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Mobile No.</th>
-						<th>Message</th>
-						<th>Sent On</th>
-						<th class="no-sort"></th>
+						<th width="5%">#</th>
+						<th width="15%">Name</th>
+						<th width="15%">Email</th>
+						<th width="10%">Mobile No.</th>
+						<th width="45%">Message</th>
+						<th width="10%">Sent On</th>
 					</tr>
 				</thead>
+				<tbody>
+					<?php
+						if(!empty($quotes)) {
+							foreach($quotes as $key => $val) {
+					?>
+								<tr>
+									<td><?php echo $key+1; ?></td>
+									<td><?php echo rawurldecode($val['name']); ?></td>
+									<td><?php echo rawurldecode($val['email']); ?></td>
+									<td><?php echo rawurldecode($val['phone']); ?></td>
+									<td><?php echo rawurldecode($val['message']); ?></td>
+									<td><?php echo date('d M, Y',strtotime($val['created_at'])); ?></td>
+								</tr>
+					<?php
+							}
+						} 
+					?>
+				</tbody>
 			</table>
 		</div>
 	</div>

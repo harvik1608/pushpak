@@ -40,6 +40,21 @@
 
 	    <!--====== Style css ======-->
 	    <link rel="stylesheet" href="<?php echo $site[0]['website_url']; ?>assets/website/css/style.css">
+	    <link rel="stylesheet" type="text/css" href="<?php echo $site[0]['website_url']; ?>assets/css/toast.css">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+	    <style>
+	    	body {
+				font-family: "Nunito", serif !important;
+				font-optical-sizing: auto;
+				font-weight: 400;
+				font-style: normal;
+			}
+	    	.section-title .title {
+	    		font-size: 42px;
+	    	}
+	    </style>
 	</head>
 	<body>
 		<div id="preloader">
@@ -75,7 +90,7 @@
 	                <div class="row">
 	                    <div class="col-lg-12">
 	                        <nav class="navbar navbar-expand-lg">
-	                            <a class="navbar-brand" href="index.html">
+	                            <a class="navbar-brand" href="<?php echo $site[0]["website_url"]; ?>">
 	                                <img src="assets/website/images/logo.png" alt="Logo">
 	                            </a>
 	                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFive" aria-controls="navbarFive" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,9 +112,9 @@
 	                                    <li class="nav-item">
 	                                        <a class="page-scroll" href="services.php">Services</a>
 	                                    </li>
-	                                    <li class="nav-item">
+	                                    <!-- <li class="nav-item">
 	                                        <a class="page-scroll" href="faqs.php">FAQs</a>
-	                                    </li>
+	                                    </li> -->
 	                                    <li class="nav-item">
 	                                        <a class="page-scroll" href="contact-us.php">Contact Us</a>
 	                                    </li>
@@ -107,7 +122,7 @@
 	                            </div>
 
 	                            <div class="navbar-btn d-none d-sm-inline-block">
-	                                <a class="main-btn main-btn-2" href="quote.php">Get A Quote</a>
+	                                <a class="main-btn main-btn-2" href="<?php echo $site[0]["website_url"]; ?>#contact-area">Get A Quote</a>
 
 	                            </div>
 	                       	</nav>

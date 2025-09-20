@@ -24,28 +24,76 @@
 				<form action="submit_settings.php" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="website_url" value="<?php echo isset($settings[0]['website_url']) ? $settings[0]['website_url'] : ''; ?>" />
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="mb-3">
 								<label class="form-label">Site Name</label>
 								<input type="text" class="form-control" name="site_name" id="site_name" placeholder="Enter site name" value="<?php echo isset($settings[0]['site_name']) ? $settings[0]['site_name'] : ''; ?>" required  />
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="mb-3">
 								<label class="form-label">Site Email</label>
 								<input type="text" class="form-control" name="site_email" id="site_email" placeholder="Enter site email" value="<?php echo isset($settings[0]['site_email']) ? $settings[0]['site_email'] : ''; ?>" required  />
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-3">
 							<div class="mb-3">
 								<label class="form-label">Site Phone</label>
 								<input type="text" class="form-control" name="site_phone" id="site_phone" placeholder="Enter site phone" value="<?php echo isset($settings[0]['site_phone']) ? $settings[0]['site_phone'] : ''; ?>" required  />
 							</div>
 						</div>
-						<div class="col-md-12">
+						<div class="col-md-3">
+							<div class="mb-3">
+								<label class="form-label">Site Year</label>
+								<input type="text" class="form-control" name="site_year" id="site_year" placeholder="Enter site year" value="<?php echo isset($settings[0]['site_year']) ? $settings[0]['site_year'] : ''; ?>" required  />
+							</div>
+						</div>
+						<div class="col-md-6">
 							<div class="mb-3">
 								<label class="form-label">Site Address</label>
-								<textarea class="form-control" name="site_address" id="site_address" placeholder="Enter site address"><?php echo isset($settings[0]['site_address']) ? rawurldecode($settings[0]['site_address']) : ''; ?></textarea>
+								<input type="text" class="form-control" name="site_address" id="site_address" placeholder="Enter site address" value="<?php echo isset($settings[0]['site_address']) ? rawurldecode($settings[0]['site_address']) : ''; ?>" />
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="mb-3">
+								<label class="form-label">Completed Projects</label>
+								<input type="text" class="form-control" name="site_completed_projects" id="site_completed_projects" placeholder="Enter completed projects" value="<?php echo isset($settings[0]['site_completed_projects']) ? $settings[0]['site_completed_projects'] : ''; ?>" required  />
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="mb-3">
+								<label class="form-label">Experienced Workers</label>
+								<input type="text" class="form-control" name="site_experienced_workers" id="site_experienced_workers" placeholder="Enter experienced workers" value="<?php echo isset($settings[0]['site_experienced_workers']) ? $settings[0]['site_experienced_workers'] : ''; ?>" required  />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label class="form-label">Site Video</label>
+								<input type="text" class="form-control" name="site_video_url" id="site_video_url" placeholder="Enter site video" value="<?php echo isset($settings[0]['site_video_url']) ? $settings[0]['site_video_url'] : ''; ?>" required  />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label class="form-label">Facebook URL</label>
+								<input type="text" class="form-control" name="site_facebook_url" id="site_facebook_url" placeholder="Enter facebook url" value="<?php echo isset($settings[0]['site_facebook_url']) ? $settings[0]['site_facebook_url'] : ''; ?>"  />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label class="form-label">Twitter URL</label>
+								<input type="text" class="form-control" name="site_twitter_url" id="site_twitter_url" placeholder="Enter twitter url" value="<?php echo isset($settings[0]['site_twitter_url']) ? $settings[0]['site_twitter_url'] : ''; ?>"  />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label class="form-label">Pinterest URL</label>
+								<input type="text" class="form-control" name="site_pinterest_url" id="site_pinterest_url" placeholder="Enter pinterest url" value="<?php echo isset($settings[0]['site_pinterest_url']) ? $settings[0]['site_pinterest_url'] : ''; ?>"  />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label class="form-label">Instagram URL</label>
+								<input type="text" class="form-control" name="site_instagram_url" id="site_instagram_url" placeholder="Enter instagram url" value="<?php echo isset($settings[0]['site_instagram_url']) ? $settings[0]['site_instagram_url'] : ''; ?>"  />
 							</div>
 						</div>
 						<div class="col-md-12">

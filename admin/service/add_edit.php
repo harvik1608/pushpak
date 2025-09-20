@@ -48,6 +48,12 @@
 						</div>
 						<div class="col-md-12">
 							<div class="mb-3">
+								<label class="form-label">Service Description</label>
+								<textarea class="form-control" name="description" id="description" placeholder="Enter service description" required><?php echo isset($service['description']) ? rawurldecode($service['description']) : ''; ?></textarea>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="mb-3">
 								<label class="form-label">Service Status</label>
 								<select class="select" name="is_active" id="is_active">
 									<option value="1" <?php echo isset($service['is_active']) && $service['is_active'] == 1 ? "selected" : ""; ?>>Active</option>

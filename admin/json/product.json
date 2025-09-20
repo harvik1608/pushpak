@@ -1,22 +1,32 @@
 [
     {
         "no": "1758286257",
-        "action": "add",
-        "old_photo": "",
+        "action": "edit",
+        "old_photo": "1758286314.jpeg",
         "name": "Direct%20Hydraulic%20Goods%20Lift",
         "category_id": "1758285591",
         "amount": "2000",
         "is_active": "1",
-        "avatar": "1758286314.jpeg"
+        "avatar": "1758370754.jpg"
     },
     {
         "no": "1758286490",
         "action": "edit",
         "old_photo": "",
         "name": "Direct%20Hydraulic%20Lift_3000%20Kg%20Capacity",
+        "category_id": "1758285609",
+        "amount": "25000",
+        "is_active": "1",
+        "avatar": "1758370761.jpg"
+    },
+    {
+        "no": "1758370856",
+        "action": "add",
+        "old_photo": "",
+        "name": "Direct%20Hydraulic%20Lift_Double%20Side%20Door%20Opening",
         "category_id": "1758285591",
         "amount": "25000",
         "is_active": "1",
-        "avatar": ""
+        "avatar": "1758370866.jpg"
     }
 ]

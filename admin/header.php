@@ -31,7 +31,7 @@
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/plugins/fontawesome/css/fontawesome.min.css">
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/plugins/fontawesome/css/all.min.css">
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/plugins/tabler-icons/tabler-icons.min.css">
-		<link rel="stylesheet" type="text/css" href="https://supermetplast.com/public/assets/toast/jquery.toast.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo $site[0]['website_url']; ?>assets/css/toast.css">
 		<link rel="stylesheet" href="<?php echo $site[0]["website_url"]; ?>assets/css/style.css">
 		<style>
 			.jq-toast-single {
@@ -184,11 +184,6 @@
 									<li>
 										<a href="<?php echo $site[0]["website_url"]; ?>admin/settings.php">
 											<i data-feather="box"></i><span>General Settings</span>
-										</a>
-									</li>
-									<li>
-										<a href="<?php echo $site[0]["website_url"]; ?>admin/inquiry/list.php">
-											<i data-feather="box"></i><span>Inquiry List</span>
 										</a>
 									</li>
 								</ul>

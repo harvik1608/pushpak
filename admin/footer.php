@@ -6,7 +6,7 @@
 		<script src="<?php echo $site[0]["website_url"]; ?>assets/js/feather.min.js"></script>
 		<script src="<?php echo $site[0]["website_url"]; ?>assets/js/jquery.slimscroll.min.js"></script>
 		<script src="<?php echo $site[0]["website_url"]; ?>assets/js/bootstrap.bundle.min.js"></script>
-		<script src="https://supermetplast.com/public/assets/toast/jquery.toast.js"></script>
+		<script src="<?php echo $site[0]["website_url"]; ?>assets/js/toast.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs4.min.js"></script>
 		<script src="<?php echo $site[0]["website_url"]; ?>assets/js/script.js"></script>
 		<script>
