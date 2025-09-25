@@ -182,6 +182,11 @@
 										</a>
 									</li>
 									<li>
+										<a href="<?php echo $site[0]["website_url"]; ?>admin/photo/list.php">
+											<i data-feather="box"></i><span>Photo List</span>
+										</a>
+									</li>
+									<li>
 										<a href="<?php echo $site[0]["website_url"]; ?>admin/settings.php">
 											<i data-feather="box"></i><span>General Settings</span>
 										</a>

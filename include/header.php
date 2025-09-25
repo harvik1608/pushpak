@@ -112,9 +112,9 @@
 	                                    <li class="nav-item">
 	                                        <a class="page-scroll" href="services.php">Services</a>
 	                                    </li>
-	                                    <!-- <li class="nav-item">
-	                                        <a class="page-scroll" href="faqs.php">FAQs</a>
-	                                    </li> -->
+	                                    <li class="nav-item">
+	                                        <a class="page-scroll" href="gallery.php">Gallery</a>
+	                                    </li>
 	                                    <li class="nav-item">
 	                                        <a class="page-scroll" href="contact-us.php">Contact Us</a>
 	                                    </li>
